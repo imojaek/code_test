@@ -54,6 +54,10 @@ public class BOJ10757v2 {
             numB = 0;
         }
 
+        if (carry == 1) { // 올림수만 남은경우 처리 ex) 123456789 + 999999999
+            strList.add("1");
+        }
+
         for (int i = strList.size() - 1; i >= 0 ; i--) {
             System.out.print(strList.get(i));
         }
