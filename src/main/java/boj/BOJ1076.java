@@ -22,11 +22,17 @@ public class BOJ1076 {
         String tens = sc.next();
         String ones = sc.next();
         String trailZero = sc.next();
-        int result = (map.get(tens) * 10 + map.get(ones));
-        System.out.print(result);
+//        int result = (map.get(tens) * 10 + map.get(ones));
+//        System.out.print(result);
+//        if (result != 0) {
+//            for (int i = 0; i < map.get(trailZero); i++) {
+//                System.out.print(0);
+//            }
+//        }
+        Long result = (long) (map.get(tens) * 10 + map.get(ones));
         for (int i = 0; i < map.get(trailZero); i++) {
-            System.out.print(0);
+            result *= 10;
         }
+        System.out.print(result);
     }
-
 }
