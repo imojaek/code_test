@@ -12,8 +12,5 @@ public class BOJ1546 {
             queue.add(sc.nextInt());
         }
 
-        int max = queue.peek();
-        
-
     }
 }
