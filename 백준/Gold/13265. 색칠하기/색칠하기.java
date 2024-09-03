@@ -1,3 +1,6 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {
@@ -5,12 +8,13 @@ public class Main {
 
     static int[] color;
     static List<List<Integer>> graph;
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int testCase = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int testCase = Integer.parseInt(br.readLine());
         for (int t = 0; t < testCase; t++) {
-            n = sc.nextInt();
-            m = sc.nextInt();
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            n = Integer.parseInt(st.nextToken());
+            m = Integer.parseInt(st.nextToken());
 
             color = new int[n + 1];
             graph = new ArrayList<>();
@@ -19,8 +23,9 @@ public class Main {
             }
 
             for (int i = 0; i < m; i++) {
-                int p1 = sc.nextInt();
-                int p2 = sc.nextInt();
+                st = new StringTokenizer(br.readLine());
+                int p1 = Integer.parseInt(st.nextToken());
+                int p2 = Integer.parseInt(st.nextToken());
                 graph.get(p1).add(p2);
                 graph.get(p2).add(p1);
             }
