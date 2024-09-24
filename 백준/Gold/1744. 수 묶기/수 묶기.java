@@ -39,16 +39,11 @@ public class Main {
                 }
             }
             if (flag) {
-                if (pq.size() % 2 == 0) {
-                    while (!pq.isEmpty()) {
-                        answer += pq.poll() * pq.poll();
-                    }
-                }
-                else {
+                if (pq.size() % 2 == 1) {
                     answer += pq.poll();
-                    while (!pq.isEmpty()) {
-                        answer += pq.poll() * pq.poll();
-                    }
+                }
+                while (!pq.isEmpty()) {
+                    answer += pq.poll() * pq.poll();
                 }
             }
             if (pq.size() == 1)
